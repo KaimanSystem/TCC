@@ -7,7 +7,7 @@ if (isset($_POST['matricula'])) {
     $matricula = $_POST['matricula'];
     $tempo_logout = date('Y-m-d H:i:s');
 
-    // Atualizar o tempo de logout no banco de dados
+     // Atualizar o tempo de logout no banco de dados
     $sql = "UPDATE alunos SET tempo_logout = ? WHERE matricula = ?";
     if ($stmt = $conexao->prepare($sql)) {
         $stmt->bind_param('ss', $tempo_logout, $matricula);

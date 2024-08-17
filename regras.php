@@ -7,7 +7,7 @@ if (!isset($_SESSION['matricula'])) {
     header('Location: home.php');
     exit;
 }
-
+ 
 // Exibir o tempo de login do usuário
 $matricula = $_SESSION['matricula'];
 $sql = "SELECT tempo_login FROM alunos WHERE matricula = ?";

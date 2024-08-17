@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $safe_key = $_POST['safe_key'];
 
-    // Verificar se o e-mail e a chave de segurança estão no banco de dados
+     // Verificar se o e-mail e a chave de segurança estão no banco de dados
     $sql = "SELECT safe_key FROM alunos WHERE email = ?";
     $stmt = $conexao->prepare($sql);
     $stmt->bind_param('s', $email);

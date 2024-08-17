@@ -9,7 +9,7 @@
         $cpf = $_POST['cpf'];
         $telefone = $_POST['telefone'];
         
-        // Executar a query para inserir os dados na tabela
+         // Executar a query para inserir os dados na tabela
         $result = mysqli_query($conexao, "INSERT INTO comunidade(nome,email,senha,cpf,telefone)  VALUES('$nome', '$email', '$senha', '$cpf', '$telefone')");
 
         // Verificar se a inserção foi bem-sucedida

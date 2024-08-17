@@ -9,7 +9,7 @@ function gerarPDF($conexao) {
     $pdf->AddPage();
     $pdf->SetFont('Arial', 'B', 14); // Tamanho da fonte maior para o título
 
-    // Título do documento
+     // Título do documento
     $pdf->Cell(0, 10, utf8_decode('Relatório de Usuários'), 0, 1, 'C');
     $pdf->Ln(10); // Adiciona um espaço após o título
 

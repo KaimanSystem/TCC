@@ -17,7 +17,7 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
     $sql = "SELECT * FROM servidores WHERE email = ? AND senha = ?";
     
     if ($stmt = $conexao->prepare($sql)) {
-        // Associa os parâmetros e executa a consulta
+        // Associa os parâmetros e executa a consulta 
         $stmt->bind_param('ss', $email, $senha);
         
         if ($stmt->execute()) {

@@ -46,7 +46,7 @@
             }, 2000); // 2000 milissegundos = 2 segundos
         }
         
-        // Chama a função quando a página é carregada
+         // Chama a função quando a página é carregada
         window.onload = redirectAfterDelay;
     </script>
 </head>

@@ -15,7 +15,7 @@
         .container {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: center; 
             padding: 20px;
             max-width: 1200px;
             margin: auto;

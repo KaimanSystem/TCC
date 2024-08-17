@@ -13,7 +13,7 @@ function gerarPDF($conexao) {
     $pdf->Cell(0, 10, utf8_decode('Relatório da Comunidade'), 0, 1, 'C');
     $pdf->Ln(10); // Adiciona um espaço após o título
 
-    // Calcula a largura total da tabela
+     // Calcula a largura total da tabela
     $tableWidth = 15 + 55 + 50 + 60 + 30;
     $pageWidth = $pdf->GetPageWidth();
     $marginX = ($pageWidth - $tableWidth) / 2;

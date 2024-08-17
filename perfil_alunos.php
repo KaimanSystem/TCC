@@ -30,7 +30,7 @@ $matricula = $_SESSION['matricula'];
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding-top: 60px; /* Espaço para a barra de navegação */
+            padding-top: 60px;  /* Espaço para a barra de navegação */
         }
 
         .navbar {

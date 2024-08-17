@@ -19,7 +19,7 @@ if (isset($_POST['cpf']) && isset($_POST['senha'])) {
         exit;
     }
 
-    // Prepara a consulta SQL para evitar SQL Injection
+    // Prepara a consulta SQL para evitar SQL Injection 
     $sql = "SELECT * FROM comunidade WHERE CPF = ? AND senha = ?";
     
     if ($stmt = $conexao->prepare($sql)) {

@@ -2,7 +2,7 @@
 session_start();
 include_once('config.php');
 
-// Verificar se a sessão está definida para 'matricula'
+ // Verificar se a sessão está definida para 'matricula'
 if (!isset($_SESSION['matricula'])) {
     header('Location: home.php');
     exit;

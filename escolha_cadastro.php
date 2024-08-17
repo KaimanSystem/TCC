@@ -31,7 +31,7 @@
             width: 80%;
             max-width: 500px;
 
-            margin: 0 auto; /* Center horizontally */
+            margin: 0 auto;  /* Center horizontally */
         }
         a {
             text-decoration: none;

@@ -10,7 +10,7 @@ if (!isset($_SESSION['matricula'])) {
 
 $matricula = $_SESSION['matricula'];
 
-// Consulta SQL atualizada para incluir safe_key
+ // Consulta SQL atualizada para incluir safe_key
 $sql = "SELECT nome, email, telefone, safe_key FROM alunos WHERE matricula = ?";
 if ($stmt = $conexao->prepare($sql)) {
     $stmt->bind_param('s', $matricula);

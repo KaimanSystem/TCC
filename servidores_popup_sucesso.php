@@ -30,7 +30,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
+            flex-direction: column; 
         }
         .popup img {
             max-width: 100%;

@@ -9,7 +9,7 @@
         $matricula = $_POST['matricula'];
         $telefone = $_POST['telefone'];
         
-        // Executar a query para inserir os dados na tabela
+         // Executar a query para inserir os dados na tabela
         $result = mysqli_query($conexao, "INSERT INTO servidores(nome,email,senha,matricula,telefone)  VALUES('$nome', '$email', '$senha', '$matricula', '$telefone')");
 
         // Verificar se a inserção foi bem-sucedida

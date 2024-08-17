@@ -18,7 +18,7 @@
             height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: center; /* Centraliza verticalmente */
+            align-items: center;  /* Centraliza verticalmente */
             position: relative;
         }
         .box {

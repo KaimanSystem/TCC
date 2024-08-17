@@ -39,7 +39,7 @@
         }
     </style>
     <script>
-        // Função para redirecionar após 2 segundos
+         // Função para redirecionar após 2 segundos
         function redirectAfterDelay() {
             setTimeout(function() {
                 window.location.href = 'login_aluno.php';

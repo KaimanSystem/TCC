@@ -15,7 +15,7 @@ if (isset($_SESSION['cpf'])) {
         $stmt->close();
     }
 
-    // Limpar a sessão
+     // Limpar a sessão
     session_unset();
     session_destroy();
 }

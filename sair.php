@@ -6,7 +6,7 @@ if (isset($_POST['tempoTotal']) && isset($_SESSION['matricula'])) {
     $tempoTotal = mysqli_real_escape_string($conexao, $_POST['tempoTotal']);
     $matricula = mysqli_real_escape_string($conexao, $_SESSION['matricula']);
 
-    // Atualize o tempo de logout no banco de dados
+    //  Atualize o tempo de logout no banco de dados
     $sql = "UPDATE `usuários` 
             SET tempo_logout = NOW(), 
                 tempo_login = TIME_TO_SEC(TIMEDIFF(NOW(), tempo_login)) + TIME_TO_SEC('$tempoTotal') 

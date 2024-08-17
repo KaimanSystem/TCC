@@ -32,7 +32,7 @@
         }
 
         .inputSubmit {
-            background-color: #829d5e; /* Same green color as home page */
+            background-color: #829d5e;  /* Same green color as home page */
             width: 100%;
             border: none;
             padding: 15px;
