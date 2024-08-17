@@ -45,13 +45,13 @@
             opacity: 1;
             background-color: #568915;
         }
-        .top-right-container {
+        .top-left-container {
             position: absolute;
             top: 10px;
-            right: 10px;
+            left: 0;
         }
-        .top-right-image {
-            width: 100px;
+        .top-left-image {
+            width: 70%;
             height: auto;
             border: none; /* Remove border */
         }
@@ -76,7 +76,7 @@
         .date-time {
             position: absolute;
             top: 10px;
-            left: 10px;
+            right: 10px;
             font-size: 24px;
             color: white;
         }
@@ -94,9 +94,9 @@
     </style>
 </head>
 <body>
-    <div class="top-right-container">
+    <div class="top-left-container">
         <a href="sobre_KS.php">
-            <img src="IMG/jacare_logo.png" alt="Logo" class="top-right-image">
+            <img src="IMG/kaiman_logo.png" alt="Logo" class="top-left-image">
         </a>
     </div>
     <div class="box">
@@ -110,7 +110,7 @@
         <a href="escolha_cadastro.php">Cadastre-se</a>
     </div>
     <div class="social-links">
-        <a href="https://github.com/LuizzGustavoo/Site_De_Registro" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/KaimanSystem/TCC" target="_blank"><i class="fab fa-github"></i></a>
     </div>
     <div class="date-time" id="date-time"></div>
     <div class="author-info">
@@ -120,7 +120,6 @@
     <script>
         // Alternating welcome messages
         const messages = [
-            "Seja Bem Vindo(a)!!",
             "Bem-vindo ao Kaiman System!",
             "Estamos felizes em vê-lo(a)!"
         ];
