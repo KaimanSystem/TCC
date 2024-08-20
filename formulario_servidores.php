@@ -149,7 +149,7 @@
     </style>
 </head>
 <body>
-    <a href="home.php" class="back-btn"><i class="fas fa-arrow-left"></i>VOLTAR</a>
+    <a href="escolha_cadastro.php" class="back-btn"><i class="fas fa-arrow-left"></i>VOLTAR</a>
     <div class="container">
         <div class="form-container">
             <form action="formulario_servidores.php" method="POST">

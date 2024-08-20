@@ -65,9 +65,13 @@
             margin: 10px;
             padding: 10px;
             border-radius: 50%;
-            font-size: 20px;
+            font-size: 30px;
             color: white;
             border: 3px solid #568915; /* Keep border */
+            width: 30px; /* Defina uma largura fixa */
+            height: 30px; /* Defina uma altura fixa */
+            line-height: 30px; /* Alinhar o texto verticalmente */
+            text-align: center; /* Alinhar o texto horizontalmente */
             transition: none; /* Remove hover effect */
         }
         .social-links a:hover {
