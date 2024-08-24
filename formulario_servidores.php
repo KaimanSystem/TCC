@@ -175,21 +175,10 @@
                         <input type="tel" name="telefone" id="telefone" class="inputUser" required>
                         <label for="telefone" class="LabelInput">Telefone</label>
                     </div>                   
-                    <div class="inputBox curso-options">
-                        <label><b>Curso:</b></label><br>
-                        <input type="radio" name="Curso" value="ADS" id="ADS">
-                        <label for="ADS">ADS</label><br>
-                        <input type="radio" name="Curso" value="TÉC INFO" id="TÉC INFO">
-                        <label for="TÉC INFO">TÉC INFO</label><br>
-                        <input type="radio" name="Curso" value="TÉC ADM" id="TÉC ADM">
-                        <label for="TÉC ADM">TÉC ADM</label><br>
-                        <input type="radio" name="Curso" value="outro" id="outro">
-                        <label for="outro">OUTRO</label>
-                    </div>
                     <input type="submit" name="submit" id="submit" value="Cadastrar">
                 </fieldset>
             </form>
-            <p>Já tem uma conta? <a href="login.php" style="color: #568915;">Faça login aqui</a>.</p>
+            <p>Já tem uma conta? <a href="login_servidores.php" style="color: #568915;">Faça login aqui</a>.</p>
         </div>
     </div>
 </body>
