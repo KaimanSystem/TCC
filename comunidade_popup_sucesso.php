@@ -53,7 +53,7 @@
 </head>
 <body>
     <div class="popup">
-        <img src="IMG/sucesso.jpeg" alt="Cadastro Sucesso">
+        <img src="IMG/sucesso.png" alt="Cadastro Sucesso">
         <p>Cadastro realizado com sucesso!</p>
     </div>
 </body>
