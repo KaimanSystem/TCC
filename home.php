@@ -67,7 +67,7 @@
             border-radius: 50%;
             font-size: 20px;
             color: white;
-            border: 3px solid #568915;
+            border: 3px solid #568915;  
             transition: none; 
         }
         .social-links a:hover {
