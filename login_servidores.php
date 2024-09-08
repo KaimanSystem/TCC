@@ -11,7 +11,7 @@
 
         body {
             font-family: 'Bebas Neue', sans-serif;
-            background-image: linear-gradient(to bottom, #dfe2e6, #829d5e);
+            background-image: linear-gradient(to top, #92e06e, #3a6925);
             margin: 0;
             padding: 0;
             display: flex;

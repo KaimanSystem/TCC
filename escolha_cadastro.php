@@ -11,7 +11,7 @@
 
         body {
             font-family: 'Bebas Neue', sans-serif;
-            background-image: linear-gradient(to bottom, #dfe2e6, #829d5e);
+            background-image: linear-gradient(to top, #92e06e, #3a6925);
             text-align: center;
             color: #ffffff;
             margin: 0;
@@ -31,7 +31,7 @@
             width: 80%;
             max-width: 500px;
 
-            margin: 0 auto;  /* Center horizontally */
+            margin: 0 auto;  
         }
         a {
             text-decoration: none;
@@ -46,10 +46,9 @@
         a:hover {
             background-color: #568915;
         }
-        
         .back-btn {
             background-color: rgba(0, 0, 0, 0.7);
-            color: white;
+            color: #ffffff;
             border: none;
             padding: 10px 20px;
             border-radius: 5px;
@@ -59,25 +58,21 @@
             position: absolute;
             top: 20px;
             left: 20px;
-            margin-top: 10px;
         }
-
         .back-btn:hover {
             background-color: #568915;
         }
-
         .back-btn i {
             margin-right: 5px;
         }
     </style>
 </head>
 <body>
-    <a href="home.php" class="back-btn"><i class="fas fa-arrow-left"></i>Voltar</a>
+    <a href="home.php" class="back-btn"><i class="fas fa-arrow-left"></i>VOLTAR</a>
     <div class="box">
         <h1>Escolha o Tipo de Cadastro</h1>
         <br>
         <a href="formulario_aluno.php">Alunos</a>
-        <a href="formulario_servidores.php">Servidores</a>
         <a href="formulario_comunidade.php">Comunidade</a>
     </div>
 </body>

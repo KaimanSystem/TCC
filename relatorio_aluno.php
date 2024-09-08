@@ -105,17 +105,17 @@ if (isset($_POST['gerar_pdf'])) {
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-image: linear-gradient(to bottom, #f0f4f8, #c6d5d8);
+            background-image: linear-gradient(to top, #92e06e, #3a6925);
         }
 
         /* Estilo do contêiner principal */
         .container {
             background-color: #ffffff;
-            padding: 40px; /* Aumenta o padding */
+            padding: 40px; 
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
-            width: 400px; /* Aumenta a largura */
+            width: 400px; 
             max-width: 90%;
         }
 
@@ -125,10 +125,10 @@ if (isset($_POST['gerar_pdf'])) {
             font-size: 32px;
             margin: 0 0 20px;
             color: #333;
-            text-align: center; /* Centraliza o título */
-            white-space: nowrap; /* Impede a quebra de linha */
-            overflow: hidden; /* Oculta qualquer texto que exceda o contêiner */
-            text-overflow: ellipsis; /* Adiciona reticências se o texto for muito longo */
+            text-align: center; 
+            white-space: nowrap; 
+            overflow: hidden; 
+            text-overflow: ellipsis; 
         }
 
         /* Estilo dos campos do formulário */
@@ -172,6 +172,7 @@ if (isset($_POST['gerar_pdf'])) {
             background-color: #5a6b4f;
             transform: translateY(0);
         }
+        
     </style>
 </head>
 <body>

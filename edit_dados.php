@@ -11,7 +11,7 @@
 
         body {
             font-family: 'Bebas Neue', sans-serif;
-            background-image: linear-gradient(to bottom, #dfe2e6, #829d5e);
+            background-image: linear-gradient(to top, #92e06e, #3a6925);
             text-align: center;
             color: #ffffff;
             margin: 0;
@@ -46,9 +46,29 @@
         a:hover {
             background-color: #568915;
         }
+        .back-btn {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .back-btn:hover {
+            background-color: #568915;
+        }
+        .back-btn i {
+            margin-right: 5px;
+        }
     </style>
 </head>
 <body>
+    <a href="funcao_servidores.php" class="back-btn"><i class="fas fa-arrow-left"></i>VOLTAR</a>
     <div class="box">
         <h1>Auditoria do Sistema</h1>
         <p>Conteúdo específico para auditoria do sistema.</p>
@@ -61,7 +81,7 @@
         <a href="dados/ADD_usuario.php"> Adicionar usuário da comunidade</a>
         
     </div>
-         <!-- Aqui você pode adicionar tabelas ou gráficos com os dados dos alunos -->
+         <!-- Em breve -->
     </div>
 </body>
 </html>

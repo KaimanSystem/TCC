@@ -35,7 +35,7 @@ if ($stmt = $conexao->prepare($sql)) {
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <style>
         body {
-            background: linear-gradient(to right, #dfe2e6, #829d5e);
+            background-image: linear-gradient(to top, #92e06e, #3a6925);
             color: white;
             text-align: center;
             font-family: Arial, sans-serif;
@@ -44,7 +44,7 @@ if ($stmt = $conexao->prepare($sql)) {
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding-top: 60px; /* Espaço para a barra de navegação */
+            padding-top: 60px; 
         }
 
         .navbar {
@@ -54,21 +54,28 @@ if ($stmt = $conexao->prepare($sql)) {
             background-color: #829d5e;
             display: flex;
             justify-content: space-between;
-            padding: 0 10px; /* Reduzido para 10px */
+            padding: 0 10px; 
             z-index: 1000;
-            height: 50px; /* Altura reduzida para 50px */
-            align-items: center; /* Alinha o conteúdo verticalmente no centro */
+            height: 50px; 
+            align-items: center; 
         }
 
         .navbar-brand {
             font-family: 'Bebas Neue', cursive;
-            font-size: 16px; /* Fonte reduzida para 16px */
+            font-size: 16px; 
             color: white;
+        }
+
+        .navbar-brand img {
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
         }
 
         .btn-danger {
             font-family: 'Bebas Neue', cursive;
-            font-size: 14px; /* Fonte reduzida para 14px */
+            font-size: 14px; 
         }
 
         .data-container {

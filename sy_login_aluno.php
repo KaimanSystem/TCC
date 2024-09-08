@@ -10,7 +10,7 @@ error_reporting(E_ALL);
 if (isset($_POST['matricula']) && isset($_POST['senha'])) {
     $matricula = $_POST['matricula'];
     $senha = $_POST['senha'];
-    $id_computador = $_SERVER['REMOTE_ADDR']; //  Exemplo de identificação do computador, você pode usar um ID fixo ou um identificador diferente
+    $id_computador = $_SERVER['REMOTE_ADDR']; //  Exemplo de identificação do computador, ID fixo ou um identificador diferente
 
     if (empty($matricula) || empty($senha)) {
         $_SESSION['error'] = "Campos não preenchidos.";

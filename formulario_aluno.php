@@ -8,10 +8,11 @@ if (isset($_POST['submit'])) {
     $senha = $_POST['senha'];
     $matricula = $_POST['matricula'];
     $telefone = $_POST['telefone'];
+    $curso = $_POST['curso'];
     $safe_key = $_POST['safe_key']; // Adicionado
 
      // Executar a query para inserir os dados na tabela
-    $result = mysqli_query($conexao, "INSERT INTO alunos(nome,email,senha,matricula,telefone,safe_key) VALUES('$nome', '$email', '$senha', '$matricula', '$telefone', '$safe_key')");
+    $result = mysqli_query($conexao, "INSERT INTO alunos(nome,email,senha,matricula,telefone,safe_key,curso) VALUES('$nome', '$email', '$senha', '$matricula', '$telefone', '$safe_key', '$curso')");
 
     // Verificar se a inserção foi bem-sucedida
     if ($result) {
@@ -42,7 +43,7 @@ if (isset($_POST['submit'])) {
 
         body {
             font-family: 'Bebas Neue', sans-serif;
-            background-image: linear-gradient(to bottom, #dfe2e6, #829d5e);
+            background-image: linear-gradient(to top, #92e06e, #3a6925);
             margin: 0;
             padding: 0;
             height: 100vh;
@@ -157,7 +158,7 @@ if (isset($_POST['submit'])) {
     </style>
 </head>
 <body>
-    <a href="escolha_cadastro.php" class="back-btn"><i class="fas fa-arrow-left"></i>VOLTAR</a>
+    <a href="home.php" class="back-btn"><i class="fas fa-arrow-left"></i>VOLTAR</a>
     <div class="container">
         <div class="form-container">
             <form action="formulario_aluno.php" method="POST">
@@ -191,7 +192,7 @@ if (isset($_POST['submit'])) {
                         <label><b>Curso:</b></label><br>
                         <input type="radio" name="Curso" value="ADS" id="ADS">
                         <label for="ADS">ADS</label><br>
-                        <input type="radio" name="Curso" value="TÉC INFO" id="TÉC INFO">
+                        <input type="radio" name="curso" value="TÉC INFO" id="TÉC INFO">
                         <label for="TÉC INFO">TÉC INFO</label><br>
                         <input type="radio" name="Curso" value="TÉC ADM" id="TÉC ADM">
                         <label for="TÉC ADM">TÉC ADM</label><br>

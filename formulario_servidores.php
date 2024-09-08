@@ -42,7 +42,7 @@
 
         body {
             font-family: 'Bebas Neue', sans-serif;
-            background-image: linear-gradient(to bottom, #dfe2e6, #829d5e);
+            background-image: linear-gradient(to top, #92e06e, #3a6925);
             margin: 0;
             padding: 0;
             height: 100vh;
@@ -149,7 +149,7 @@
     </style>
 </head>
 <body>
-    <a href="escolha_cadastro.php" class="back-btn"><i class="fas fa-arrow-left"></i>VOLTAR</a>
+    <a href="home.php" class="back-btn"><i class="fas fa-arrow-left"></i>VOLTAR</a>
     <div class="container">
         <div class="form-container">
             <form action="formulario_servidores.php" method="POST">
@@ -175,21 +175,10 @@
                         <input type="tel" name="telefone" id="telefone" class="inputUser" required>
                         <label for="telefone" class="LabelInput">Telefone</label>
                     </div>                   
-                    <div class="inputBox curso-options">
-                        <label><b>Curso:</b></label><br>
-                        <input type="radio" name="Curso" value="ADS" id="ADS">
-                        <label for="ADS">ADS</label><br>
-                        <input type="radio" name="Curso" value="TÉC INFO" id="TÉC INFO">
-                        <label for="TÉC INFO">TÉC INFO</label><br>
-                        <input type="radio" name="Curso" value="TÉC ADM" id="TÉC ADM">
-                        <label for="TÉC ADM">TÉC ADM</label><br>
-                        <input type="radio" name="Curso" value="outro" id="outro">
-                        <label for="outro">OUTRO</label>
-                    </div>
                     <input type="submit" name="submit" id="submit" value="Cadastrar">
                 </fieldset>
             </form>
-            <p>Já tem uma conta? <a href="login.php" style="color: #568915;">Faça login aqui</a>.</p>
+            <p>Já tem uma conta? <a href="login_servidores.php" style="color: #568915;">Faça login aqui</a>.</p>
         </div>
     </div>
 </body>

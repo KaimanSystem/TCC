@@ -11,14 +11,14 @@
 
         body {
             font-family: 'Bebas Neue', sans-serif;
-            background-image: linear-gradient(to top, #dfe2e6, #829d5e);
+            background-image: linear-gradient(to top, #92e06e, #3a6925);
             text-align: center;
             color: #ffffff;
             margin: 0;
             height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: center;  /* Centraliza verticalmente */
+            align-items: center;
             position: relative;
         }
         .box {
@@ -53,7 +53,7 @@
         .top-left-image {
             width: 70%;
             height: auto;
-            border: none; /* Remove border */
+            border: none;
         }
         .social-links {
             position: absolute;
@@ -65,17 +65,13 @@
             margin: 10px;
             padding: 10px;
             border-radius: 50%;
-            font-size: 30px;
+            font-size: 20px;
             color: white;
-            border: 3px solid #568915; /* Keep border */
-            width: 30px; /* Defina uma largura fixa */
-            height: 30px; /* Defina uma altura fixa */
-            line-height: 30px; /* Alinhar o texto verticalmente */
-            text-align: center; /* Alinhar o texto horizontalmente */
-            transition: none; /* Remove hover effect */
+            border: 3px solid #568915;
+            transition: none; 
         }
         .social-links a:hover {
-            background-color: transparent; /* Keep transparent background on hover */
+            background-color: transparent;
         }
         .date-time {
             position: absolute;
@@ -122,7 +118,7 @@
     </div>
 
     <script>
-        // Alternating welcome messages
+        // Mensagens splash(sequencial)
         const messages = [
             "Bem-vindo ao Kaiman System!",
             "Estamos felizes em vê-lo(a)!"
@@ -135,7 +131,7 @@
             welcomeMessageElement.textContent = messages[messageIndex];
         }, 3000);
 
-        // Display current date and time
+        // data atual e hora atual
         function updateDateTime() {
             const now = new Date();
             const formattedDate = now.toLocaleDateString('pt-BR', { 
@@ -147,7 +143,7 @@
 
         setInterval(updateDateTime, 1000);
 
-        // Alert after inactivity
+        // Alerta de tempo inativo
         let inactivityTime = function () {
             let time;
             window.onload = resetTimer;

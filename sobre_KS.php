@@ -4,70 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaiman System | Sobre Nós</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-            overflow-x: hidden;
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center; 
-            padding: 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-        .column {
-            width: 100%;
-            max-width: 800px;
-            padding: 20px;
-            background-color: #fff;
-            margin: 10px 0;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .column h2 {
-            margin-top: 0;
-            color: #333;
-        }
-        .column p {
-            line-height: 1.6;
-            color: #555;
-        }
         @media (max-width: 768px) {
             .container {
                 padding: 10px;
             }
-            .column {
-                width: calc(100% - 20px);
-                margin: 10px 0;
-            }
         }
+        .back-btn {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;  
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            margin-top: 10px; 
+        }
+        .back-btn:hover {
+            background-color: #568915;
+        }
+        .back-btn i {
+            margin-right: 5px;
+        }
+
+        .texto1{
+            text-align: center;
+            font-size: 25;
+            color: red;
+        }
+
+
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="column" id="section1">
-            <h2>Quem Somos Nós</h2>
-            <p>
-                A
-            </p>
-        </div>
-        <div class="column" id="section2">
-            <h2>Sobre o Projeto</h2>
-            <p>
-                AA
-            </p>
-        </div>
-        <div class="column" id="section3">
-            <h2>Em Breve</h2>
-            <p>
-                AAA
-            </p>
-        </div>
+    <a href="home.php" class="back-btn"><i class="fas fa-arrow-left"></i>VOLTAR</a>
+    <div class="texto1">
+    <p>
+        Sobre nós
+    </p>
     </div>
+
 </body>
 </html>

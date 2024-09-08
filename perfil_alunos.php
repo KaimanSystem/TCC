@@ -21,7 +21,7 @@ $matricula = $_SESSION['matricula'];
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <style>
         body {
-            background: linear-gradient(to right, #dfe2e6, #829d5e);
+            background-image: linear-gradient(to top, #92e06e, #3a6925);
             color: white;
             text-align: center;
             font-family: Arial, sans-serif;
@@ -30,7 +30,7 @@ $matricula = $_SESSION['matricula'];
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding-top: 60px;  /* Espaço para a barra de navegação */
+            padding-top: 60px; /* Espaço para a barra de navegação */
         }
 
         .navbar {
@@ -51,10 +51,43 @@ $matricula = $_SESSION['matricula'];
             font-size: 16px; /* Fonte reduzida para 16px */
             color: white;
         }
+        
+        .navbar-brand img {
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
 
-        .btn-danger {
-            font-family: 'Bebas Neue', cursive;
-            font-size: 14px; /* Fonte reduzida para 14px */
+        .menu-icon {
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+        }
+
+        .menu-dropdown {
+            display: none;
+            position: absolute;
+            top: 50px; /* Ajusta a posição do menu dropdown */
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.9);
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            z-index: 1100;
+        }
+
+        .menu-dropdown a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            display: block;
+            padding: 8px;
+            transition: background 0.3s;
+        }
+
+        .menu-dropdown a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
         }
 
         .profile-options {
@@ -97,8 +130,16 @@ $matricula = $_SESSION['matricula'];
             <img src="IMG/perfil.png" alt="Perfil">
             Meu Perfil
         </a>
-        <div class="d-flex">
-            <a href="sair.php" class="btn btn-danger me-3">Sair</a>
+        <div class="d-flex position-relative">
+            <!-- Ícone de Menu -->
+            <img src="IMG/menu-icon.png" alt="Menu" class="menu-icon" onclick="toggleMenu()">
+            
+            <!-- Menu Dropdown -->
+            <div class="menu-dropdown" id="menuDropdown">
+                <a href="#" onclick="confirmDelete()">Excluir a conta</a>
+                <a href="regras.php">Voltar</a>
+                <a href="#" onclick="soonFeature()">Em breve</a>
+            </div>
         </div>
     </nav> 
 
@@ -108,5 +149,37 @@ $matricula = $_SESSION['matricula'];
         <a href="alunos_verificar_dados.php">Verificar Dados</a>
     </div>
 
+    <script>
+        // Função para alternar o menu dropdown
+        function toggleMenu() {
+            var menuDropdown = document.getElementById('menuDropdown');
+            if (menuDropdown.style.display === 'block') {
+                menuDropdown.style.display = 'none';
+            } else {
+                menuDropdown.style.display = 'block';
+            }
+        }
+
+        // Função para confirmar exclusão de conta
+        function confirmDelete() {
+            if (confirm('Você tem certeza de que deseja excluir sua conta? Esta ação é irreversível.')) {
+                window.location.href = 'excluir_conta.php'; 
+            }
+        }
+
+        // Função para alertar sobre a funcionalidade em breve
+        function soonFeature() {
+            alert('Esta funcionalidade estará disponível em breve.');
+        }
+
+        // Fechar o menu dropdown ao clicar fora dele
+        document.addEventListener('click', function(event) {
+            var menuDropdown = document.getElementById('menuDropdown');
+            var menuIcon = document.querySelector('.menu-icon');
+            if (!menuIcon.contains(event.target) && !menuDropdown.contains(event.target)) {
+                menuDropdown.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>

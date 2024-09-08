@@ -6,7 +6,7 @@ if (isset($_SESSION['cpf']) && !isset($_SESSION['senha'])) {
     unset($_SESSION['cpf']);
     unset($_SESSION['senha']);
     header('Location: login_comunidade.php');
-    exit; // Adicione o exit para garantir que o script pare após o redirecionamento
+    exit; 
 }
 ?>
 <!DOCTYPE html>
@@ -31,7 +31,7 @@ if (isset($_SESSION['cpf']) && !isset($_SESSION['senha'])) {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding-top: 60px; /* Espaço para a barra de navegação */
+        padding-top: 60px; 
     }
 
         .navbar {
@@ -76,7 +76,7 @@ if (isset($_SESSION['cpf']) && !isset($_SESSION['senha'])) {
         }
 
         .rules h2 {
-            color: #829d5e; /* Verde do projeto */
+            color: #829d5e; 
             font-family: 'Bebas Neue', cursive;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             margin-bottom: 20px;

@@ -11,7 +11,7 @@
 
         body {
             font-family: 'Bebas Neue', sans-serif;
-            background-image: linear-gradient(to bottom, #dfe2e6, #829d5e);
+            background-image: linear-gradient(to top, #92e06e, #3a6925);
             margin: 0;
             padding: 0;
             display: flex;
@@ -89,7 +89,7 @@
         <h2>Login - Comunidade</h2>
         <form action="sy_login_comunidade.php" method="POST">
             <div class="inputBox">
-                <input type="text" name="cpf" id="cpf" class="inputUser" placeholder="cpf" required>
+                <input type="text" name="cpf" id="cpf" class="inputUser" placeholder="CPF" required>
             </div>
             <br><br>
             <div class="inputBox">

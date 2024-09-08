@@ -77,7 +77,7 @@ if (isset($_POST['gerar_pdf'])) {
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-image: linear-gradient(to bottom, #dfe2e6, #829d5e);
+            background-image: linear-gradient(to top, #92e06e, #3a6925);
         }
 
         /* Estilo do contêiner principal */

@@ -6,6 +6,7 @@
     <title>Cadastro Bem-sucedido</title>
     <style>
         body {
+            background-image: linear-gradient(to top, #92e06e, #3a6925);
             font-family: 'Bebas Neue', sans-serif;
             background-color: #dfe2e6;
             margin: 0;
@@ -52,7 +53,7 @@
 </head>
 <body>
     <div class="popup">
-        <img src="IMG/sucesso.jpeg" alt="Cadastro Sucesso">
+        <img src="IMG/sucesso.png" alt="Cadastro Sucesso">
         <p>Cadastro realizado com sucesso!</p>
     </div>
 </body>

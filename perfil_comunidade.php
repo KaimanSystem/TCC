@@ -6,6 +6,6 @@
     <title>Kaiman System | perfil_comunidade</title>
 </head>
 <body>
-<!---->
+
 </body>
 </html>

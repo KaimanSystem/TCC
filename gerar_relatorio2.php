@@ -32,7 +32,7 @@ function gerarPDF($conexao) {
 
     // Dados dos usuários
     $pdf->SetFont('Arial', '', 10);
-    $sql = "SELECT id, nome, cp, email, senha FROM comunidade";
+    $sql = "SELECT id, nome, cpf, email, senha FROM comunidade";
     $result = $conexao->query($sql);
 
     if ($result->num_rows > 0) {
@@ -70,29 +70,26 @@ if (isset($_POST['gerar_pdf'])) {
     <style>
         /* Estilos gerais */
         /* Estilos gerais */
-    @import url('https://fonts.cdnfonts.com/css/bebas-neue');
-    
-    body {
-        font-family: 'Bebas Neue', sans-serif;
-        background-image: linear-gradient(to top, #829d5e, #dfe2e6);
-        text-align: center;
-        color: #ffffff;
-        margin: 0;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;  /* Centraliza verticalmente */
-        position: relative;
-    }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #f0f4f8, #c6d5d8);
+}
 
 /* Estilo do contêiner principal */
 .container {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 80%;
-    max-width: 500px;
+    background-color: #ffffff;
+    padding: 60px; /* Aumenta o padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 500px; /* Aumenta a largura do contêiner */
+    max-width: 90%;
 }
 
 /* Estilo do título */
@@ -100,7 +97,7 @@ h1 {
     font-family: 'Bebas Neue', cursive;
     font-size: 30px; /* Aumenta o tamanho da fonte */
     margin: 0 0 30px; /* Ajusta a margem */
-    color: white;
+    color: #333;
     text-align: center; /* Centraliza o título */
     white-space: nowrap; /* Impede a quebra de linha */
     overflow: hidden; /* Oculta qualquer texto que exceda o contêiner */
