@@ -73,9 +73,9 @@
         <h1>Recupere sua senha</h1>
         <form action="gerar_token.php" method="POST">
             <label for="email">Digite seu e-mail:</label>
-            <input type="email" id="email" name="email" placeholder="seu-email@exemplo.com" required>
+            <input type="email" id="email" name="email" required>
             <label for="safe_key">Digite sua chave de segurança:</label>
-            <input type="text" id="safe_key" name="safe_key" placeholder="exemplo123" required>
+            <input type="text" id="safe_key" name="safe_key"required>
             <input type="submit" value="Enviar">
         </form>
     </div>

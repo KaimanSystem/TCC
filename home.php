@@ -10,7 +10,7 @@
         @import url('https://fonts.cdnfonts.com/css/bebas-neue');
 
         body {
-            font-family: 'Bebas Neue', sans-serif;
+            font-family: sans-serif;
             background-image: linear-gradient(to top, #92e06e, #3a6925);
             text-align: center;
             color: #ffffff;
@@ -67,7 +67,7 @@
             border-radius: 50%;
             font-size: 20px;
             color: white;
-            border: 3px solid #568915;  
+            border: 3px solid #568915;
             transition: none; 
         }
         .social-links a:hover {
@@ -104,7 +104,8 @@
         <h3>Escolha o Tipo de Login ou faça o cadastro</h3>
         <br>
         <a href="login_aluno.php">Alunos</a>
-        <a href="login_servidores.php">Servidores</a>
+        <a href="login_servidores.php">Servidores [ADM] </a>
+        <a href="login_servidores_geral.php">Servidores [GERAL] </a>
         <a href="login_comunidade.php">Comunidade</a>
         <br>
         <a href="escolha_cadastro.php">Cadastre-se</a>

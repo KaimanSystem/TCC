@@ -10,7 +10,7 @@
         @import url('https://fonts.cdnfonts.com/css/bebas-neue');
 
         body {
-            font-family: 'Bebas Neue', sans-serif;
+            font-family: sans-serif;
             background-image: linear-gradient(to top, #92e06e, #3a6925);
             text-align: center;
             color: #ffffff;
@@ -74,6 +74,7 @@
         <br>
         <a href="formulario_aluno.php">Alunos</a>
         <a href="formulario_comunidade.php">Comunidade</a>
+        <a href="formulario_servidores_geral.php">Servidores [GERAL]</a>
     </div>
 </body>
 </html>

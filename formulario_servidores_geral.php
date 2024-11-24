@@ -10,12 +10,12 @@
         $telefone = $_POST['telefone'];
         
          // Executar a query para inserir os dados na tabela
-        $result = mysqli_query($conexao, "INSERT INTO servidores(nome,email,senha,matricula,telefone)  VALUES('$nome', '$email', '$senha', '$matricula', '$telefone')");
+        $result = mysqli_query($conexao, "INSERT INTO servidores_geral(nome,email,senha,matricula,telefone)  VALUES('$nome', '$email', '$senha', '$matricula', '$telefone')");
 
         // Verificar se a inserção foi bem-sucedida
         if ($result) {
             // Redirecionar para a página de sucesso com o pop-up
-            header('Location: servidores_popup_sucesso.php');
+            header('Location: servidores_geral_popup_sucesso.php');
             exit;
         } else {
             // Em caso de falha na inserção
@@ -152,7 +152,7 @@
     <a href="home.php" class="back-btn"><i class="fas fa-arrow-left"></i>VOLTAR</a>
     <div class="container">
         <div class="form-container">
-            <form action="formulario_servidores.php" method="POST">
+            <form action="formulario_servidores_geral.php" method="POST">
                 <fieldset>
                     <legend><b>Cadastro de Servidores</b></legend>
                     <div class="inputBox">
@@ -178,7 +178,7 @@
                     <input type="submit" name="submit" id="submit" value="Cadastrar">
                 </fieldset>
             </form>
-            <p>Já tem uma conta? <a href="login_servidores.php" style="color: #568915;">Faça login aqui</a>.</p>
+            <p>Já tem uma conta? <a href="login_servidores_geral.php" style="color: #568915;">Faça login aqui</a>.</p>
         </div>
     </div>
 </body>

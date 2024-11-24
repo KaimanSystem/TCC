@@ -15,11 +15,12 @@ if (isset($_SESSION['cpf'])) {
         $stmt->close();
     }
 
-    // Limpar a sessão
+     // Limpar a sessão
     session_unset();
     session_destroy();
 }
 
 header('Location: login_comunidade.php');
 exit;
+// Resolvendo conflitos e aplicando alterações no código
 ?>
