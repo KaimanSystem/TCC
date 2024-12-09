@@ -13,7 +13,7 @@ if (isset($_POST['matricula']) && isset($_POST['senha'])) {
         exit;
     }
 
-    // Prepara a consulta SQL para evitar SQL Injection
+    // Prepara a consulta SQL para evitar SQL Injection 
     $sql = "SELECT * FROM servidores_geral WHERE matricula = ? AND senha = ?";
     
     if ($stmt = $conexao->prepare($sql)) {

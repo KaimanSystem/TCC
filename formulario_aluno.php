@@ -217,7 +217,7 @@ legend {
                     </div>
                     <div class="inputBox">
                         <input type="email" name="email" id="email" class="inputUser" pattern="[a-zA-Z0-9._%+-]+@aluno\.ifsp\.edu\.br$" title="O email deve seguir o formato 'exemplo@aluno.ifsp.edu.br'" required>
-                        <label for="email" class="LabelInput">Email</label>
+                        <label for="email" class="LabelInput">Email</label> 
                     </div>
                     <div class="inputBox">
                         <input type="tel" name="telefone" id="telefone" class="inputUser" pattern="[0-9]{9}" title="O telefone deve ter exatamente 9 dígitos" required>

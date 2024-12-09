@@ -18,7 +18,7 @@
             overflow: hidden;
         }
         .popup {
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.7); 
             color: #ffffff;
             padding: 20px;
             border-radius: 10px;

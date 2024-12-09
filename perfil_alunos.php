@@ -106,7 +106,7 @@ $matricula = $_SESSION['matricula'];
         <h2>Opções de Perfil</h2>
         <a href="alunos_alterar_dados.php">Alterar Dados</a>
         <a href="alunos_verificar_dados.php">Verificar Dados</a>
-    </div>
+    </div> 
 
 </body>
 </html>

@@ -76,7 +76,7 @@
             <input type="email" id="email" name="email" placeholder="seu-email@exemplo.com" required>
             <label for="safe_key">Digite sua chave de segurança:</label>
             <input type="text" id="safe_key" name="safe_key" placeholder="exemplo123" required>
-            <input type="submit" value="Enviar">
+            <input type="submit" value="Enviar"> 
         </form>
     </div>
 </body>

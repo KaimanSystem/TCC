@@ -6,7 +6,7 @@ if (isset($_SESSION['cpf']) && !isset($_SESSION['senha'])) {
     unset($_SESSION['cpf']);
     unset($_SESSION['senha']);
     header('Location: login_comunidade.php');
-    exit; // Adicione o exit para garantir que o script pare após o redirecionamento
+    exit; // Adicione o exit para garantir que o script pare após o redirecionamento 
 }
 ?>
 <!DOCTYPE html>

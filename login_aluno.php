@@ -105,6 +105,6 @@
             <input class="inputSubmit" type="submit" name="submit" value="Entrar">
         </form>
         <p>Esqueceu a senha? <a href="solicitar_recuperacao.php" style="color: #829d5e;">Recupere aqui</a>.</p>
-    </div>
+    </div> 
 </body>
 </html>

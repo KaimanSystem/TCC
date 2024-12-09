@@ -178,7 +178,7 @@ if ($stmt = $conexao->prepare($sql)) {
             }
         }, 1000);
 
-        // Confirmação de logout com feedback visual
+        // Confirmação de logout com feedback visual 
         function registrarLogout(event) {
             event.preventDefault();
             if (confirm("Você realmente deseja sair?")) {

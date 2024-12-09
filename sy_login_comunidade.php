@@ -62,6 +62,6 @@ if (isset($_POST['cpf']) && isset($_POST['senha'])) {
     exit;
 }
 
-// Fecha a conexão com o banco de dados
+// Fecha a conexão com o banco de dados 
 $conexao->close();
 ?>

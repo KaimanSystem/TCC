@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->close();
 
     if ($email) {
-        // Atualizar a senha no banco de dados (sem hashing)
+        // Atualizar a senha no banco de dados (sem hashing) 
         $sql = "UPDATE alunos SET senha = ?, token_recuperacao = NULL, data_token = NULL WHERE email = ?";
         $stmt = $conexao->prepare($sql);
         $stmt->bind_param('ss', $nova_senha, $email);

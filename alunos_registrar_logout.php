@@ -18,7 +18,7 @@ if (isset($_SESSION['matricula'])) {
     if ($stmt = $conexao->prepare($sql)) {
         $stmt->bind_param('ss', $tempo_logout, $matricula);
 
-        // Debug para verificar os valores enviados
+        // Debug para verificar os valores enviados 
         error_log("SQL: $sql | Params: tempo_logout=$tempo_logout, matricula=$matricula");
 
         // Executa a consulta

@@ -22,5 +22,5 @@ if (isset($_SESSION['cpf'])) {
 
 header('Location: login_comunidade.php');
 exit;
-// Resolvendo conflitos e aplicando alterações no código
+// Resolvendo conflitos e aplicando alterações no código 
 ?>

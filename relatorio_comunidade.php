@@ -108,7 +108,7 @@ if (isset($_POST['gerar_pdf'])) {
             padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s; 
         }
 
         input[type="submit"]:hover {

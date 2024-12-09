@@ -155,7 +155,7 @@ if (isset($_POST['gerar_pdf'])) {
             background-color: #829d5e;
             color: white;
             border: none;
-            padding: 14px 20px; /* Aumenta o padding do botão */
+            padding: 14px 20px; /* Aumenta o padding do botão */ 
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s, transform 0.2s;

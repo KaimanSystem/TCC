@@ -14,7 +14,7 @@
 
         // Verificar se a inserção foi bem-sucedida
         if ($result) {
-            // Redirecionar para a página de sucesso com o pop-up
+            // Redirecionar para a página de sucesso com o pop-up 
             header('Location: comunidade_popup_sucesso.php');
             exit;
         } else {

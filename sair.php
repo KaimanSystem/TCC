@@ -13,7 +13,7 @@ if (isset($_POST['tempoTotal']) && isset($_SESSION['matricula'])) {
             WHERE matricula = '$matricula'";
 
     if (mysqli_query($conexao, $sql)) {
-        // Se a atualização for bem-sucedida, finalize a sessão
+        // Se a atualização for bem-sucedida, finalize a sessão 
         unset($_SESSION['matricula']);
         unset($_SESSION['senha']);
         header('Location: home.php');

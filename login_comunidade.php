@@ -90,7 +90,7 @@
         <form action="sy_login_comunidade.php" method="POST">
             <div class="inputBox">
                 <input type="text" name="cpf" id="cpf" class="inputUser" placeholder="cpf" required>
-            </div>
+            </div> 
             <br><br>
             <div class="inputBox">
                 <input type="password" name="senha" id="senha" class="inputUser" placeholder="Senha" required>

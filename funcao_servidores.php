@@ -22,7 +22,7 @@ function gerarPDF($conexao) {
     $pdf->SetX($marginX);
 
     // Cabeçalhos das colunas
-    $pdf->SetFont('Arial', 'B', 12); // Aumentar a fonte dos cabeçalhos
+    $pdf->SetFont('Arial', 'B', 12); // Aumentar a fonte dos cabeçalhos 
     $pdf->Cell(15, 12, 'ID', 1);
     $pdf->Cell(55, 12, utf8_decode('Nome'), 1);
     $pdf->Cell(50, 12, utf8_decode('Matrícula'), 1);
