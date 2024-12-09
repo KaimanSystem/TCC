@@ -81,7 +81,7 @@
         <a href="dados/ADD_usuario.php"> Adicionar usuário da comunidade</a>
         
     </div>
-         <!-- Em breve -->
+         <!-- Aqui você pode adicionar tabelas ou gráficos com os dados dos alunos -->
     </div>
 </body>
 </html>

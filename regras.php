@@ -127,7 +127,7 @@ if ($stmt = $conexao->prepare($sql)) {
             Meu Perfil
         </a>
         <div class="d-flex">
-        <a href="sair.php" class="btn btn-danger me-3">Sair</a>
+            <a href="sair.php" class="btn btn-danger me-3" onclick="registrarLogout(event)">Sair</a>
         </div>
     </nav>
     <div class="rules">
@@ -140,6 +140,7 @@ if ($stmt = $conexao->prepare($sql)) {
             <li>Não coma ou beba dentro da biblioteca.</li>
             <li>Utilize os computadores apenas para atividades acadêmicas.</li>
         </ul>
+        <div id="cronometro">Tempo online: 00:00:00</div>
     </div>
 
     <script>
@@ -151,6 +152,31 @@ if ($stmt = $conexao->prepare($sql)) {
                 rule.style.transform = 'translateY(0)';
             }, index * 500);
         });
+
+        // Cronômetro com mudança de cor
+        let startTime = new Date("<?php echo $tempo_login; ?>").getTime();
+        let interval = setInterval(function () {
+            let now = new Date().getTime();
+            let elapsedTime = now - startTime;
+
+            let hours = Math.floor((elapsedTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((elapsedTime % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((elapsedTime % (1000 * 60)) / 1000);
+
+            hours = hours < 10 ? "0" + hours : hours;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            const cronometro = document.getElementById("cronometro");
+            cronometro.innerHTML = "Tempo online: " + hours + ":" + minutes + ":" + seconds;
+
+            // Muda a cor do cronômetro depois de 30 minutos
+            if (hours > 0 || minutes >= 30) {
+                cronometro.style.color = 'red';
+            } else if (minutes >= 15) {
+                cronometro.style.color = 'orange';
+            }
+        }, 1000);
 
         // Confirmação de logout com feedback visual
         function registrarLogout(event) {

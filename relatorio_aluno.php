@@ -1,16 +1,36 @@
 <?php
 session_start();
 require('fpdf/fpdf.php');
-require('config.php');
+require('config.php'); // Inclua o arquivo de conexão
 
+// Função para gerar o relatório em PDF
 function gerarPDF($conexao, $date, $period) {
-    $pdf = new FPDF('L'); // 'L' para paisagem
+    $pdf = new FPDF();
     $pdf->AddPage();
-    $pdf->SetFont('Arial', 'B', 14);
-    $pdf->Cell(0, 10, utf8_decode('Relatório dos Alunos'), 0, 1, 'C');
-    $pdf->Ln(10);
+    $pdf->SetFont('Arial', 'B', 14); // Tamanho da fonte maior para o título
 
-    // Define os horários com base no período
+    // Título do  documento
+    $pdf->Cell(0, 10, utf8_decode('Relatório dos Alunos'), 0, 1, 'C');
+    $pdf->Ln(10); // Adiciona um espaço após o título
+
+    // Calcula a largura total da tabela
+    $tableWidth = 15 + 55 + 50 + 60 + 30;
+    $pageWidth = $pdf->GetPageWidth();
+    $marginX = ($pageWidth - $tableWidth) / 2;
+
+    // Posiciona a tabela no centro
+    $pdf->SetX($marginX);
+
+    // Cabeçalhos das colunas
+    $pdf->SetFont('Arial', 'B', 12); // Aumentar a fonte dos cabeçalhos
+    $pdf->Cell(15, 12, 'ID', 1);
+    $pdf->Cell(55, 12, utf8_decode('Nome'), 1);
+    $pdf->Cell(50, 12, utf8_decode('Matrícula'), 1);
+    $pdf->Cell(60, 12, utf8_decode('Email'), 1);
+    $pdf->Cell(30, 12, utf8_decode('Senha'), 1);
+    $pdf->Ln();
+
+    // Definir horários com base no período
     switch ($period) {
         case 'matutino':
             $start_time = '06:00:00';
@@ -30,42 +50,26 @@ function gerarPDF($conexao, $date, $period) {
             break;
     }
 
-    // Consulta para buscar dados dos alunos, incluindo curso e horários de login e logout
-    $sql = "SELECT a.id, a.nome, a.matricula, a.email, a.curso, h.tempo_login, 
-            DATE_SUB(h.tempo_logout, INTERVAL 1 DAY) AS tempo_logout_sub, 
-            ADDTIME(DATE_SUB(h.tempo_logout, INTERVAL 1 DAY), '20:00:00') AS tempo_logout_final
-            FROM alunos AS a 
-            JOIN historico_logins AS h ON a.matricula = h.matricula 
-            WHERE DATE(h.tempo_login) = ? 
-            AND TIME(h.tempo_login) BETWEEN ? AND ?";
-
+    // Dados dos usuários filtrados
+    $pdf->SetFont('Arial', '', 10);
+    $sql = "SELECT id, nome, matricula, email, senha 
+            FROM alunos 
+            WHERE DATE(tempo_login) = ? 
+            AND TIME(tempo_login) BETWEEN ? AND ?";
     $stmt = $conexao->prepare($sql);
     $stmt->bind_param('sss', $date, $start_time, $end_time);
     $stmt->execute();
     $result = $stmt->get_result();
 
-    // Cabeçalhos da tabela
-    $pdf->SetFont('Arial', 'B', 12);
-    $pdf->Cell(15, 12, 'ID', 1);
-    $pdf->Cell(55, 12, utf8_decode('Nome'), 1);
-    $pdf->Cell(40, 12, utf8_decode('Matrícula'), 1);
-    $pdf->Cell(30, 12, utf8_decode('Curso'), 1);
-    $pdf->Cell(34, 12, utf8_decode('Entrada'), 1);
-    $pdf->Cell(34, 12, utf8_decode('Saída'), 1);
-    $pdf->Cell(60, 12, utf8_decode('Email'), 1);
-    $pdf->Ln();
-
-    // Dados dos alunos
-    $pdf->SetFont('Arial', '', 10);
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
+            $pdf->SetX($marginX); // Centraliza cada linha de dados
             $pdf->Cell(15, 10, $row['id'], 1);
             $pdf->Cell(55, 10, utf8_decode($row['nome']), 1);
-            $pdf->Cell(40, 10, utf8_decode($row['matricula']), 1);
-            $pdf->Cell(30, 10, utf8_decode($row['curso']), 1);
-            $pdf->Cell(34, 10, $row['tempo_login'], 1);
-            $pdf->Cell(34, 10, $row['tempo_logout_final'], 1); // Exibe o tempo_logout final
+            $pdf->Cell(50, 10, utf8_decode($row['matricula']), 1);
             $pdf->Cell(60, 10, utf8_decode($row['email']), 1);
+            // Esconder a senha real
+            $pdf->Cell(30, 10, '******', 1);
             $pdf->Ln();
         }
     } else {
@@ -73,10 +77,11 @@ function gerarPDF($conexao, $date, $period) {
     }
 
     // Saída do PDF
-    $pdf->Output('D', 'relatorio_alunos.pdf');
+    $pdf->Output('D', 'relatorio_alunos.pdf'); // 'D' força o download do PDF
     exit();
 }
 
+// Verifica se o botão de gerar PDF foi clicado e se os parâmetros de filtro foram enviados
 if (isset($_POST['gerar_pdf'])) {
     $date = $_POST['date'];
     $period = $_POST['period'];
@@ -100,17 +105,17 @@ if (isset($_POST['gerar_pdf'])) {
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-image: linear-gradient(to top, #92e06e, #3a6925);
+            background-image: linear-gradient(to bottom, #f0f4f8, #c6d5d8);
         }
 
         /* Estilo do contêiner principal */
         .container {
             background-color: #ffffff;
-            padding: 40px; 
+            padding: 40px; /* Aumenta o padding */
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
-            width: 400px; 
+            width: 400px; /* Aumenta a largura */
             max-width: 90%;
         }
 
@@ -120,10 +125,10 @@ if (isset($_POST['gerar_pdf'])) {
             font-size: 32px;
             margin: 0 0 20px;
             color: #333;
-            text-align: center; 
-            white-space: nowrap; 
-            overflow: hidden; 
-            text-overflow: ellipsis; 
+            text-align: center; /* Centraliza o título */
+            white-space: nowrap; /* Impede a quebra de linha */
+            overflow: hidden; /* Oculta qualquer texto que exceda o contêiner */
+            text-overflow: ellipsis; /* Adiciona reticências se o texto for muito longo */
         }
 
         /* Estilo dos campos do formulário */
@@ -167,13 +172,12 @@ if (isset($_POST['gerar_pdf'])) {
             background-color: #5a6b4f;
             transform: translateY(0);
         }
-        
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Gerar Relatório | Alunos</h1>
-        <form action="relatorio_aluno.php" method="POST">
+        <form action="gerar_relatorio.php" method="POST">
             <label for="date">Data:</label>
             <input type="date" id="date" name="date" required>
             <label for="period">Período:</label>
@@ -187,3 +191,7 @@ if (isset($_POST['gerar_pdf'])) {
     </div>
 </body>
 </html>
+
+
+
+

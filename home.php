@@ -10,15 +10,15 @@
         @import url('https://fonts.cdnfonts.com/css/bebas-neue');
 
         body {
-            font-family: sans-serif;
-            background-image: linear-gradient(to top, #92e06e, #3a6925);
+            font-family: 'Bebas Neue', sans-serif;
+            background-image: linear-gradient(to top, #dfe2e6, #829d5e);
             text-align: center;
             color: #ffffff;
             margin: 0;
             height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: center;  /* Centraliza verticalmente */
             position: relative;
         }
         .box {
@@ -53,7 +53,7 @@
         .top-left-image {
             width: 70%;
             height: auto;
-            border: none;
+            border: none; /* Remove border */
         }
         .social-links {
             position: absolute;
@@ -65,13 +65,17 @@
             margin: 10px;
             padding: 10px;
             border-radius: 50%;
-            font-size: 20px;
+            font-size: 30px;
             color: white;
-            border: 3px solid #568915;
-            transition: none; 
+            border: 3px solid #568915; /* Keep border */
+            width: 30px; /* Defina uma largura fixa */
+            height: 30px; /* Defina uma altura fixa */
+            line-height: 30px; /* Alinhar o texto verticalmente */
+            text-align: center; /* Alinhar o texto horizontalmente */
+            transition: none; /* Remove hover effect */
         }
         .social-links a:hover {
-            background-color: transparent;
+            background-color: transparent; /* Keep transparent background on hover */
         }
         .date-time {
             position: absolute;
@@ -104,8 +108,7 @@
         <h3>Escolha o Tipo de Login ou faça o cadastro</h3>
         <br>
         <a href="login_aluno.php">Alunos</a>
-        <a href="login_servidores.php">Servidores [ADM] </a>
-        <a href="login_servidores_geral.php">Servidores [GERAL] </a>
+        <a href="login_servidores.php">Servidores</a>
         <a href="login_comunidade.php">Comunidade</a>
         <br>
         <a href="escolha_cadastro.php">Cadastre-se</a>
@@ -119,7 +122,7 @@
     </div>
 
     <script>
-        // Mensagens splash(sequencial)
+        // Alternating welcome messages
         const messages = [
             "Bem-vindo ao Kaiman System!",
             "Estamos felizes em vê-lo(a)!"
@@ -132,7 +135,7 @@
             welcomeMessageElement.textContent = messages[messageIndex];
         }, 3000);
 
-        // data atual e hora atual
+        // Display current date and time
         function updateDateTime() {
             const now = new Date();
             const formattedDate = now.toLocaleDateString('pt-BR', { 
@@ -144,7 +147,7 @@
 
         setInterval(updateDateTime, 1000);
 
-        // Alerta de tempo inativo
+        // Alert after inactivity
         let inactivityTime = function () {
             let time;
             window.onload = resetTimer;
