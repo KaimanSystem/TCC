@@ -73,6 +73,7 @@
         <h1>Escolha o Tipo de Cadastro</h1>
         <br>
         <a href="formulario_aluno.php">Alunos</a>
+        <a href="formulario_servidores.php">Servidores</a>
         <a href="formulario_comunidade.php">Comunidade</a>
     </div>
 </body>

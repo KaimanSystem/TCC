@@ -96,28 +96,27 @@ if (isset($_POST['gerar_pdf'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaiman System | Admin</title>
     <style>
-        @import url('https://fonts.cdnfonts.com/css/bebas-neue');
         /* Estilos gerais */
         body {
-            font-family: 'Bebas Neue', sans-serif;
-            background-image: linear-gradient(to top, #92e06e, #3a6925);
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 100vh;
+            background-image: linear-gradient(to top, #92e06e, #3a6925);
         }
 
         /* Estilo do contêiner principal */
         .container {
-            width: 90%;
-            max-width: 400px;
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            background-color: #ffffff;
+            padding: 40px; 
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
+            width: 400px; 
+            max-width: 90%;
         }
 
         /* Estilo do título */
@@ -125,7 +124,7 @@ if (isset($_POST['gerar_pdf'])) {
             font-family: 'Bebas Neue', cursive;
             font-size: 32px;
             margin: 0 0 20px;
-            color: white;
+            color: #333;
             text-align: center; 
             white-space: nowrap; 
             overflow: hidden; 
@@ -137,7 +136,7 @@ if (isset($_POST['gerar_pdf'])) {
             display: block;
             font-size: 16px;
             margin: 10px 0 5px;
-            color: white;
+            color: #555;
         }
 
         input[type="date"], select {
